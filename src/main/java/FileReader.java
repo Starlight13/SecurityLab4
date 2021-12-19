@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 public class FileReader {
 
     private final static String TOP_100_PSWD_FILENAME = "top100.txt";
-    private final static String TOP_100K_PSWD_FILENAME = "top100k.txt";
     private final static String TOP_1M_PSWD_FILENAME = "top1m.txt";
+    private final static String DICTIONARY_FILENAME = "words.txt";
 
     public List<String> getTop100Passwords() {
         return getDataFromFile(new File("src/main/java/passwords/" + TOP_100_PSWD_FILENAME));
@@ -18,6 +18,10 @@ public class FileReader {
 
     public List<String> getTopCommonPasswords() {
         return getDataFromFile(new File("src/main/java/passwords/" + TOP_1M_PSWD_FILENAME));
+    }
+
+    public List<String> getDictionary() {
+        return getDataFromFile(new File("src/main/java/passwords/" + DICTIONARY_FILENAME));
     }
 
 
